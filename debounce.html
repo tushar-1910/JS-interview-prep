@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text">
+</body>
+<script>
+    let timeout;
+    const debounce = (fun,wait) => {
+        return function main(...args){
+            if(timeout){
+                clearTimeout(timeout);
+            }
+            timeout = setTimeout(fun, wait);
+        };
+    };
+
+    function print(value)
+    {
+        console.log(document.getElementById('input').value);
+    }
+    const call = debounce(print,2000);
+    document.getElementById('input').addEventListener('input',() => {
+        call();
+    });
+
+</script>
+</html>
