@@ -2,6 +2,8 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { filterCountry, getcity, sortPopulation } from '../../Redux/City/action'
 import { getCountry } from '../../Redux/Country/action'
+import TransitionsModal from '../Edit/Edit'
+import Button from '@mui/material/Button';
 function Home() {
 
     const { cities } = useSelector(store => store.cities)
@@ -40,6 +42,7 @@ function Home() {
             <option key={country.id} value={country.country}>{country.country}</option>
           ))}
         </select>
+        
             <table className='table'>
                 <thead >
                     <tr>
@@ -58,8 +61,8 @@ function Home() {
                             <td>{city.country}</td>
                             <td>{city.city}</td>
                             <td>{city.population}</td>
-                            <td><button>Edit</button></td>
-                            <td><button onClick={()=>{handleDelete(city.id)}}>Delete</button></td>
+                            <td><TransitionsModal item={city}/></td>
+                            <td><Button onClick={()=>{handleDelete(city.id)}}>Delete</Button></td>
                         </tr>
                     ))}
                 </tbody>
