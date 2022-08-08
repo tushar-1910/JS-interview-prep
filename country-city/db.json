@@ -1,0 +1,48 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "country": "India"
+    },
+    {
+      "id": 2,
+      "country": "USA"
+    },
+    {
+      "country": "China",
+      "id": 3
+    }
+  ],
+  "cities": [
+    {
+      "city": "Wuhan",
+      "country": "China",
+      "population": "123",
+      "id": 3
+    },
+    {
+      "city": "Delhi",
+      "country": "India",
+      "population": "123123",
+      "id": 4
+    },
+    {
+      "city": "California",
+      "country": "USA",
+      "population": "1230000",
+      "id": 5
+    },
+    {
+      "city": "Mumbai",
+      "country": "India",
+      "population": "16500000",
+      "id": 6
+    },
+    {
+      "city": "Goa",
+      "country": "India",
+      "population": "1470000",
+      "id": 7
+    }
+  ]
+}
